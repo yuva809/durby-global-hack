@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root.dark {
+    --background: 0 0% 2%;
+    --foreground: 60 9% 96%;
+    --card: 0 0% 8%;
+    --card-foreground: 60 9% 96%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
+    --border: 0 0% 15%;
+    --accent: 214 100% 53%;
+    --accent-foreground: 0 0% 100%;
+    --radius: 1rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* One brand-consistent focus indicator for the whole site — visible on
+     both the dark and light surfaces, so keyboard users get the same
+     clear signal everywhere instead of relying on default UA outlines
+     that vanish on dark backgrounds. */
+  :focus-visible {
+    outline: 2px solid #c6ff3d;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .mkt-glass {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .mkt-grid-texture {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Sparing accent word inside a large headline — solid color, never a
+     gradient wash. */
+  .mkt-text-signal {
+    color: #c6ff3d;
+  }
+
+  .mkt-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  /* Fades the edges of a horizontally-scrolling marquee (sponsor logos)
+     so items appear/disappear instead of hard-cutting at the container
+     edge. */
+  .mkt-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-durby-float,
+  .animate-durby-drift,
+  .animate-durby-pulse,
+  .animate-durby-grain,
+  .animate-hack-marquee,
+  .animate-hack-spin-slow {
+    animation: none !important;
+  }
+}
