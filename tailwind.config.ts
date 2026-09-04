@@ -6,14 +6,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Durby brand system — black + off-white + electric blue, carried
-        // over from the main product site so the hackathon reads as
-        // unmistakably Durby. `hack-signal` is the one addition: a single
-        // extra accent reserved for this event's own identity (countdown,
-        // live badges, track numbers) — never mixed into the same element
-        // as durby-blue, and never used as a gradient partner for it.
+        // Durby brand system, light-first: warm off-white + near-black +
+        // electric blue, carried over from the main product site so the
+        // hackathon still reads as unmistakably Durby. `hack-signal` is
+        // this event's one extra accent — reserved for solid-fill chips,
+        // buttons and small decorative marks, never as foreground text or
+        // icon color on a light surface (lime-on-light fails contrast;
+        // see the accessibility note in globals.css). `durby-bg*`/
+        // `durby-ink*`/`durby-card`/`durby-line` are kept for the two
+        // deliberate dark anchors — Final CTA and Footer — only.
         "durby-bg": "#050505",
-        "durby-bg-deep": "#000000",
+        "durby-bg-deep": "#04070d",
         "durby-bg-soft": "#0b0b0b",
         "durby-card": "#141414",
         "durby-card-hover": "#1a1a1a",
@@ -22,15 +25,27 @@ const config: Config = {
         "durby-ink-muted": "#707070",
         "durby-line": "#252525",
 
-        "durby-paper": "#f5f5f2",
+        // The light system — used almost everywhere. `durby-paper` is the
+        // warm off-white base (Hero, Challenge, What You Can Build, FAQ);
+        // `durby-paper-raised` is pure white (Overview, Prizes, How to
+        // Join, Judging, Resources, and every card); `durby-tint-blue`/
+        // `durby-tint-grey` are the subtle section-to-section variation
+        // (Global Community/Why Join/Partners, and Timeline/Mentors).
+        "durby-paper": "#faf9f6",
         "durby-paper-raised": "#ffffff",
-        "durby-paper-ink": "#050505",
-        "durby-paper-ink-dim": "#555555",
-        "durby-paper-ink-muted": "#8a8a8a",
-        "durby-paper-line": "#e5e5e5",
+        "durby-paper-ink": "#0a0a0a",
+        "durby-paper-ink-dim": "#54534d",
+        "durby-paper-ink-muted": "#6b6a64",
+        "durby-paper-line": "#e6e4de",
+        "durby-tint-blue": "#eef3fc",
+        "durby-tint-grey": "#f1f0ec",
 
         "durby-blue": "#1677ff",
         "durby-blue-bright": "#3b8dff",
+        // A deeper blue reserved for solid fills that carry white text
+        // (the trust marquee band) — durby-blue itself reads closer to
+        // 4.1:1 against white, just short of the 4.5:1 body-text minimum.
+        "durby-blue-deep": "#125fd1",
         "durby-success": "#35c98a",
         "durby-warning": "#f5b942",
         "durby-danger": "#ff5c5c",
@@ -52,6 +67,7 @@ const config: Config = {
         "durby-elevated": "0 4px 24px -8px rgba(5,5,5,0.08), 0 16px 48px -16px rgba(5,5,5,0.12)",
         "durby-glass": "0 4px 24px -8px rgba(0,0,0,0.4), 0 16px 48px -12px rgba(0,0,0,0.5), inset 0 1px 0 0 rgba(255,255,255,0.08)",
         "hack-glow": "0 0 0 1px rgba(198,255,61,0.25), 0 8px 40px -8px rgba(198,255,61,0.25)",
+        "blue-glow": "0 0 0 1px rgba(22,119,255,0.18), 0 8px 40px -8px rgba(22,119,255,0.25)",
       },
       keyframes: {
         "durby-float": {

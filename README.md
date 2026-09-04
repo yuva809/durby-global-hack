@@ -66,9 +66,12 @@ form...) when it's ready — no component changes required.
 **Sponsor logos**: `SPONSOR_CATEGORIES[].slots` in `src/data/sponsors.ts`
 starts empty (renders "Open slot" placeholders). Add `{ name, href }`
 entries — or swap the render for an `<Image>` — as sponsors are confirmed.
-University Partners is the primary sponsor category — German private
-universities getting exposure to ambitious Indian students is core to why
-this event exists — so it's ordered first among the logo-wall tiers.
+University Partners is a priority sponsor category — the event itself is
+global, but private universities (German institutions in particular) get
+real value from reaching ambitious international students, including
+outreach markets like India — so it's ordered first among the logo-wall
+tiers. Don't let this framing creep into the core event identity, though:
+the hackathon itself is global, not an India × Germany event.
 
 **Prize amounts**: `src/data/prizes.ts` uses placeholder `"X,XXX"` values
 by design. Replace with confirmed figures before launch.

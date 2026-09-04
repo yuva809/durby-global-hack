@@ -15,7 +15,7 @@ export function Timeline() {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
 
   return (
-    <section id="timeline" className="relative bg-durby-paper py-24 sm:py-32">
+    <section id="timeline" className="relative bg-durby-tint-grey py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           theme="light"

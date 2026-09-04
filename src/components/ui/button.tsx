@@ -53,7 +53,7 @@ export function Button({ href, children, variant = "primary", className, externa
         href={href}
         {...externalProps}
         className={cn(
-          "mkt-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-durby-ink transition-[transform,border-color] duration-300 hover:-translate-y-0.5 hover:border-hack-signal/40",
+          "mkt-glass inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-durby-paper-ink transition-[transform,border-color] duration-300 hover:-translate-y-0.5 hover:border-durby-blue/40",
           className,
         )}
       >
@@ -67,7 +67,7 @@ export function Button({ href, children, variant = "primary", className, externa
       href={href}
       {...externalProps}
       className={cn(
-        "inline-flex items-center justify-center gap-2 px-1 py-3 text-sm font-medium text-durby-ink-dim transition-colors duration-200 hover:text-durby-ink",
+        "inline-flex items-center justify-center gap-2 px-1 py-3 text-sm font-medium text-durby-paper-ink-dim transition-colors duration-200 hover:text-durby-paper-ink",
         className,
       )}
     >

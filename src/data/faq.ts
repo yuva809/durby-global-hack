@@ -8,7 +8,7 @@ export interface FaqItem {
 export const FAQ: FaqItem[] = [
   {
     question: "Who can participate?",
-    answer: "The event is open worldwide, with a particular focus on ambitious students and young builders in India and Germany.",
+    answer: "The event is open worldwide to students, developers, designers, founders and AI builders — with active outreach to student communities in markets like India.",
   },
   {
     question: "Is the hackathon free to enter?",
@@ -24,7 +24,7 @@ export const FAQ: FaqItem[] = [
   },
   {
     question: "Is it online or in person?",
-    answer: "Format and locations are still being finalized — expect an India × Germany-connected event. Details are announced closer to the date.",
+    answer: "Format and locations are still being finalized — Durby Global Hack is an international event, so in-person, hybrid and fully remote options are all on the table. Details are announced closer to the date.",
   },
   {
     question: "What technologies can we use?",

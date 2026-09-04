@@ -12,7 +12,7 @@ const OPACITY_STEPS = [1, 0.8, 0.62, 0.46, 0.32];
 
 export function Judging() {
   return (
-    <section id="judging" className="relative bg-durby-paper py-24 sm:py-32">
+    <section id="judging" className="relative bg-durby-paper-raised py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           theme="light"

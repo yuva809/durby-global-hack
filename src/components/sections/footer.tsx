@@ -31,7 +31,7 @@ export function Footer() {
               <a href={DURBY_URL} target="_blank" rel="noopener noreferrer" className="underline decoration-durby-line underline-offset-4 hover:text-durby-ink-dim">
                 Durby
               </a>
-              , connecting builders from India and Germany.
+              , connecting builders from around the world.
             </p>
           </div>
 

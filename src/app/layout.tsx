@@ -10,23 +10,23 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${EVENT.name} — Build the Future with AI`,
+    default: `${EVENT.name} — International AI Hackathon`,
     template: `%s — ${EVENT.name}`,
   },
   description:
-    "Durby Global Hack is an international AI hackathon connecting ambitious builders from India and Germany. Technology-agnostic, paid entry, open to students, developers, designers and founders worldwide.",
-  keywords: ["hackathon", "AI hackathon", "Durby", "India Germany hackathon", "student hackathon", "global hackathon"],
+    "Durby Global Hack is an international AI hackathon bringing together builders from around the world to create innovative solutions to meaningful real-world problems. Technology-agnostic, paid entry, open worldwide.",
+  keywords: ["hackathon", "AI hackathon", "Durby", "international hackathon", "student hackathon", "global hackathon"],
   openGraph: {
-    title: `${EVENT.name} — Build the Future with AI`,
-    description: "An international AI hackathon connecting India and Germany. Technology-agnostic, paid entry, global stage.",
+    title: `${EVENT.name} — International AI Hackathon`,
+    description: "An international AI hackathon open to builders worldwide. Technology-agnostic, paid entry, one global stage.",
     url: SITE_URL,
     siteName: EVENT.name,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${EVENT.name} — Build the Future with AI`,
-    description: "An international AI hackathon connecting India and Germany. Technology-agnostic, paid entry, global stage.",
+    title: `${EVENT.name} — International AI Hackathon`,
+    description: "An international AI hackathon open to builders worldwide. Technology-agnostic, paid entry, one global stage.",
   },
   alternates: {
     canonical: SITE_URL,
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#1677ff",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${mono.variable}`}>
-      <body className="bg-durby-bg pb-20 text-durby-ink antialiased lg:pb-0">
+    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
+      <body className="bg-durby-paper pb-20 text-durby-paper-ink antialiased lg:pb-0">
         <MotionProvider>{children}</MotionProvider>
       </body>
     </html>

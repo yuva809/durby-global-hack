@@ -8,11 +8,13 @@ interface SectionHeadingProps {
   description?: ReactNode;
   align?: "left" | "center";
   className?: string;
-  /** "light" for white-background sections — dark type, same accent. */
+  /** "dark" is reserved for the two dark anchor sections (Final CTA,
+   *  Footer) — everything else on this now-light-first site uses the
+   *  default. */
   theme?: "dark" | "light";
 }
 
-export function SectionHeading({ eyebrow, title, description, align = "left", className, theme = "dark" }: SectionHeadingProps) {
+export function SectionHeading({ eyebrow, title, description, align = "left", className, theme = "light" }: SectionHeadingProps) {
   const isLight = theme === "light";
   return (
     <AnimatedSection variant="fade-up" className={cn("max-w-2xl", align === "center" && "mx-auto text-center", className)}>

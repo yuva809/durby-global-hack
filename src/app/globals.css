@@ -3,16 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-  :root.dark {
-    --background: 0 0% 2%;
-    --foreground: 60 9% 96%;
-    --card: 0 0% 8%;
-    --card-foreground: 60 9% 96%;
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 65%;
-    --border: 0 0% 15%;
-    --accent: 214 100% 53%;
-    --accent-foreground: 0 0% 100%;
+  :root {
+    --background: 45 33% 97%;
+    --foreground: 0 0% 4%;
+    --border: 60 9% 89%;
     --radius: 1rem;
   }
 
@@ -25,25 +19,40 @@
     color: hsl(var(--foreground));
   }
 
-  /* One brand-consistent focus indicator for the whole site — visible on
-     both the dark and light surfaces, so keyboard users get the same
-     clear signal everywhere instead of relying on default UA outlines
-     that vanish on dark backgrounds. */
+  /* One brand-consistent focus indicator for the whole site. Blue, not
+     lime — lime fails the 3:1 non-text contrast minimum against the
+     light surfaces that now make up almost the entire page (it only
+     read well on the old dark-first theme), while durby-blue clears it
+     comfortably against both the light sections and the two dark
+     anchors (Final CTA, Footer). */
   :focus-visible {
-    outline: 2px solid #c6ff3d;
+    outline: 2px solid #1677ff;
     outline-offset: 3px;
     border-radius: 2px;
   }
 }
 
 @layer utilities {
+  /* Frosted light glass — the navbar, hero badges/pills, and the
+     secondary button all sit on light surfaces now, so this is a white
+     frost rather than the old dark-tint version. */
   .mkt-glass {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(10, 10, 10, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  /* Dark-tint glass — reserved for the two dark anchor sections (Final
+     CTA, Footer) if either needs a glass surface. */
+  .mkt-glass-dark {
     background: rgba(20, 20, 20, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
 
+  /* Light grid lines for the dark anchors (Final CTA). */
   .mkt-grid-texture {
     background-image:
       linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
@@ -51,8 +60,19 @@
     background-size: 64px 64px;
   }
 
-  /* Sparing accent word inside a large headline — solid color, never a
-     gradient wash. */
+  /* Dark grid lines for the light sections (Hero, Challenge, What You
+     Can Build) — same texture, inverted for a light ground. */
+  .mkt-grid-texture-dark {
+    background-image:
+      linear-gradient(to right, rgba(10, 10, 10, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 10, 10, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Sparing accent word inside a large headline on a DARK background
+     only — solid color, never a gradient wash. Lime text fails contrast
+     on the light surfaces that now make up most of the page, so light
+     sections use durby-blue for emphasis instead (see Hero). */
   .mkt-text-signal {
     color: #c6ff3d;
   }
@@ -62,9 +82,8 @@
     background-repeat: repeat;
   }
 
-  /* Fades the edges of a horizontally-scrolling marquee (sponsor logos)
-     so items appear/disappear instead of hard-cutting at the container
-     edge. */
+  /* Fades the edges of a horizontally-scrolling marquee so items
+     appear/disappear instead of hard-cutting at the container edge. */
   .mkt-fade-x {
     mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);

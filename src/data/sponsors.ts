@@ -11,13 +11,14 @@ export interface SponsorCategory {
   placeholderCount?: number;
 }
 
-// University Partners is the primary sponsor category for this event —
-// German private universities getting exposure to ambitious Indian
-// students is a core part of why Durby is organizing it — so it's
-// ordered right after Title Partner, not buried further down the list.
+// University Partners is a priority sponsor category — the event is
+// global, but private universities (German institutions in particular)
+// get real value from reaching ambitious international students, including
+// strong outreach markets like India — so it's ordered right after Title
+// Partner, not buried further down the list.
 export const SPONSOR_CATEGORIES: SponsorCategory[] = [
   { title: "Title Partner", description: "Presenting partner of Durby Global Hack.", slots: [], placeholderCount: 1 },
-  { title: "University Partners", description: "German universities connecting with ambitious students from India and beyond.", slots: [] },
+  { title: "University Partners", description: "Private universities — including in Germany — connecting with ambitious international students, particularly in markets like India.", slots: [] },
   { title: "Technology Partners", description: "Platform, tooling and infrastructure partners.", slots: [] },
   { title: "Community Partners", description: "Communities helping us reach builders worldwide.", slots: [] },
   { title: "Media Partners", description: "Press and media covering the event.", slots: [] },

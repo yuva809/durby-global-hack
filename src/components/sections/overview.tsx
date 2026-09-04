@@ -12,13 +12,13 @@ const PILLARS = [
 
 export function Overview() {
   return (
-    <section id="overview" className="relative bg-durby-paper py-24 sm:py-32">
+    <section id="overview" className="relative bg-durby-paper-raised py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           theme="light"
           eyebrow="Overview"
           title="Build what comes next."
-          description="Durby Global Hack brings together developers, designers, AI builders, founders and students from India, Germany and beyond to build ambitious AI-powered solutions to real-world problems."
+          description="Durby Global Hack brings together developers, designers, AI builders, founders and students from around the world to build ambitious AI-powered solutions to real-world problems."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -41,7 +41,7 @@ export function Overview() {
           <p className="max-w-3xl text-balance text-2xl font-medium leading-snug tracking-[-0.01em] text-durby-paper-ink sm:text-3xl lg:text-4xl">
             No fixed problem statement. No required stack. Just{" "}
             <em className="text-durby-blue not-italic">ambitious builders</em>, real AI tools, and a stage that
-            spans <em className="text-durby-blue not-italic">two countries</em>.
+            spans <em className="text-durby-blue not-italic">the whole world</em>.
           </p>
         </AnimatedSection>
       </div>

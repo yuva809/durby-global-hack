@@ -22,9 +22,9 @@ export interface EligibilityFact {
 // "Entry" and "Format" deliberately avoid asserting logistics (pricing,
 // venue, hybrid structure) that haven't been decided yet.
 export const ELIGIBILITY: EligibilityFact[] = [
-  { label: "Who can join", value: "Students, developers, designers, founders, AI builders and innovators from around the world." },
+  { label: "Who can join", value: "Students, developers, designers, founders, researchers and AI builders from around the world." },
   { label: "Team size", value: "1–4 people per team. Solo entries welcome." },
   { label: "Entry", value: PRICING_NOTE },
-  { label: "Format", value: "International / Germany × India. Final format and event locations to be announced." },
+  { label: "Format", value: "International — open to participants worldwide. Final format and event locations to be announced." },
   { label: "Experience", value: "Open to different skill levels." },
 ];

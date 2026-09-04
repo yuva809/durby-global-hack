@@ -8,7 +8,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
   hover?: boolean;
 }
 
-export function Card({ children, theme = "dark", hover = true, className, ...props }: CardProps) {
+export function Card({ children, theme = "light", hover = true, className, ...props }: CardProps) {
   return (
     <div
       className={cn(

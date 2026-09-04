@@ -9,7 +9,7 @@ export function FaqSection() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <SectionHeading theme="light" eyebrow="FAQ" title="Frequently asked questions." align="center" className="mx-auto" />
 
-        <AnimatedSection delay={0.1} className="mt-16 rounded-3xl border border-durby-line bg-durby-bg-deep px-6 sm:px-10">
+        <AnimatedSection delay={0.1} className="mt-16 rounded-3xl border border-durby-paper-line bg-durby-paper-raised px-6 shadow-durby-soft sm:px-10">
           <Accordion items={FAQ} className="border-t-0" />
         </AnimatedSection>
       </div>

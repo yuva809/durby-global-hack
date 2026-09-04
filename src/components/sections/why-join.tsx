@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 
 export function WhyJoin() {
   return (
-    <section className="relative bg-durby-paper py-24 sm:py-32">
+    <section className="relative bg-durby-tint-blue py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           theme="light"

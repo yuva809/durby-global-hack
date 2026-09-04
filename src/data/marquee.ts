@@ -4,9 +4,8 @@
 // claim about cost, duration or format that isn't decided yet.
 export const MARQUEE_ITEMS: string[] = [
   "Global AI Hackathon",
-  "India × Germany",
   "AI × Innovation",
-  "Open to Builders",
+  "Open to Builders Worldwide",
   "International Community",
   "Durby Global Hack",
 ];

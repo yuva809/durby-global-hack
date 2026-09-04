@@ -9,14 +9,14 @@ import { MARQUEE_ITEMS } from "@/data/marquee";
 // screen readers from reading the list twice.
 export function TrustMarquee() {
   return (
-    <div className="relative overflow-hidden border-y border-durby-line bg-durby-bg-deep py-4">
+    <div className="relative overflow-hidden bg-durby-blue-deep py-4">
       <div className="mkt-fade-x flex w-max animate-hack-marquee">
         {[0, 1].map((clone) => (
           <div key={clone} aria-hidden={clone === 1 || undefined} className="flex shrink-0 items-center gap-8 pr-8">
             {MARQUEE_ITEMS.map((item, i) => (
               <span key={i} className="flex items-center gap-8 whitespace-nowrap">
-                <span className="text-xs font-semibold uppercase tracking-[0.25em] text-durby-ink-dim">{item}</span>
-                <span className="h-1 w-1 rounded-full bg-hack-signal" />
+                <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white">{item}</span>
+                <span className="h-1.5 w-1.5 rounded-full bg-hack-signal" />
               </span>
             ))}
           </div>
